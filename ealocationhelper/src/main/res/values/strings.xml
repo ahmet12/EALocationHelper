@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EALocationHelper</string>
+    <string name="rationale_location_permission">Uygulamada bulunan konum takibi özelliği için konum izni vermeniz gerekmektedir.</string>
+    <string name="error_permission_denied_location">Konum izni olmadan konum takibi özelliği çalışmayacaktır.</string>
+    <string name="rationale_comfirm_button">Tamam</string>
+    <string name="denied_close_button_text">Kapat</string>
+    <string name="settings_button_text">Ayarlar</string>
+</resources>
