@@ -93,6 +93,15 @@ public class EALocationHelper {
     }
 
     /**
+     * Set listener
+     *
+     * @param locationListener listener
+     */
+    public void setLocationListener(LocationListener locationListener) {
+        this.locationListener = locationListener;
+    }
+
+    /**
      * Set the update interval. Default is 10 sec
      *
      * @param updateInterval interval in millis

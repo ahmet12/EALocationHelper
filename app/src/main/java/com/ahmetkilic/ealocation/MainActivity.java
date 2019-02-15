@@ -20,14 +20,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.tv_location);
+        initHelper();
+    }
 
+    private void initHelper() {
         helper = new EALocationHelper(this, new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
                 final String msg = "Updated Location: \n" +
                         Double.toString(location.getLatitude()) + "\n" +
                         Double.toString(location.getLongitude());
-                Log.v("", msg);
+                Log.v("LocationChanged", msg);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -36,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    private void getLastLocation(){
+        Location location = helper.getLastLocationFromUpdates();
+
+        //Or get by broadcast receiver or listener
+
+        helper.getLastLocation();
     }
 
     @Override
